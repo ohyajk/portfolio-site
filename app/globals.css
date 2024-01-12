@@ -1,27 +1,60 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    /* font-family: 'Bruno Ace', cursive; */
+    font-family: "Staatliches", cursive;
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: light dark;
+    color: #ffffffde;
+    background-color: #050505;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    --track: #341212;
+    --thumb: #cc3333;
+    overflow-x: hidden !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumb) var(--track);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--track);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--thumb);
+    border: 3px solid var(--track);
+}
+
+.bg-anim {
+    background: rgba(156, 156, 156, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.2px);
+    -webkit-backdrop-filter: blur(9.2px);
+    border: 1px solid rgba(156, 156, 156, 0.43);
+}
+
+.bg-anim2 {
+    background: rgba(101, 101, 101, 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.2px);
+    -webkit-backdrop-filter: blur(9.2px);
+    border: 1px solid rgba(255, 0, 0, 0.43);
 }
